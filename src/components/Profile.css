@@ -1,0 +1,22 @@
+.user-image img {
+    max-width: 100px; /* Adjust the image width as needed */
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 4px;
+  }
+  .top-bar {
+    background-color: #f5f5f5;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .app-name {
+    font-weight: bold;
+    font-size: 18px;
+    flex-grow: 1; /* Allow the app name to take up the remaining space */
+    text-align: center; /* Center the text within the space */
+  }

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {Routes, Route} from 'react-router-dom';
+import Profile from './components/Profile.js'; 
+import Login from './components/Login.js';
+import Recommendation from './components/Recommendation.js';
+import { mentors, users } from './data';
+import MentorProfile from './components/MentorProfile.js'; 
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/profile" element={<Profile user={users[0]} />} />
+          <Route path="/recommendation" element={<Recommendation />} />
+          {mentors.map((mentor) => (
+          <Route key={mentor.id} path={`/mentor${mentor.id}`} element={<MentorProfile mentor={mentor} />} />
+        ))}
+        </Routes>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default App; 
+
+
+
+

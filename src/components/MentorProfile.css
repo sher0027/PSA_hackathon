@@ -1,0 +1,65 @@
+
+  .mentor-image img {
+    max-width: 130px; /* Adjust the image width as needed */
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 4px;
+  }
+  
+  .mentor-name {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .mentor-role {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  .mentor-skills {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .mentor-details {
+    flex-grow: 1; 
+    margin-left: 20px; 
+  }
+  
+  .skill {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 8px;
+    margin-top: 8px;
+    background-color:  #ffffff;
+    color: #2b2b2b;
+    border-radius: 20px; /* Adjust the radius for rounded corners */
+    font-size: 17px;
+    text-align: center;
+    white-space: nowrap; /* Prevent line breaks within bubbles */
+    border: 1px solid #ccc;
+  }
+  
+  .top-bar {
+    background-color: #f5f5f5;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .back-button {
+    cursor: pointer;
+  }
+  
+  .app-name {
+    font-weight: bold;
+    font-size: 18px;
+    flex-grow: 1; /* Allow the app name to take up the remaining space */
+    text-align: center; /* Center the text within the space */
+  }
+
+
+    
