@@ -76,7 +76,7 @@ return (
             </div>
             <div className="matching-score">
               Matching Score: <br></br> <div className="matching-score-number"> {mentor.skillsToLearnScore} 
-              <img src="/images/star.png" alt="Star" className="star-icon" /> </div>
+              <img src="/images/star.png" alt="Star" className="star-icon" /></div>
             </div>
           </div>
         ))}
