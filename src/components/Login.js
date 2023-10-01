@@ -16,8 +16,6 @@ function Login() {
     const [password, setPassword] = useState("");
 
     const navigateToProfile = () => {
-        // Here, you can add logic to validate the username and password
-        // For a simple example, we'll just navigate to the profile page if both fields are filled
         if (username && password) {
             navigate("/profile");
         }
@@ -34,7 +32,7 @@ function Login() {
             backgroundSize="cover"
         >
             <Image
-                src={process.env.PUBLIC_URL + "/Mentorship.png"}// Update with the actual path to your image
+                src={process.env.PUBLIC_URL + "/Mentorship.png"}
                 alt="Image Alt Text"
                 width="45vw"
                 margin="10px 0"
@@ -58,7 +56,7 @@ function Login() {
                     borderRadius="10px"
                     borderStyle="solid"
                     margin="10px 0 15px"
-                    _placeholder={{ color: "#2F4F4F", fontSize: "5px" }}
+                    _placeholder={{ color: "#2F4F4F", fontSize: "15px" }}
                 />
             </FormControl>
             <FormControl>
@@ -73,11 +71,11 @@ function Login() {
                     borderRadius="10px"
                     borderStyle="solid"
                     margin="0 0 15px"
-                    _placeholder={{ color: "#2F4F4F", fontSize: "5px" }}
+                    _placeholder={{ color: "#2F4F4F", fontSize: "15px" }}
                 />
             </FormControl>
             <Button
-                backgroundColor="#82B479" // Use a darker green color for the button
+                backgroundColor="#82B479" 
                 mt={4}
                 onClick={navigateToProfile}
                 padding="5px 20px"

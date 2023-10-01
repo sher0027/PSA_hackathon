@@ -60,7 +60,7 @@ function Recommendations() {
                     padding="10px 20px"
                     backgroundColor="#EAF6E4"
                     height="30px"
-                    boxShadow="0 5px 10px rgba(0, 0, 0, 0.2)" /* 水平偏移为0，垂直偏移为正数，模糊半径和颜色 */
+                    boxShadow="0 5px 10px rgba(0, 0, 0, 0.2)" 
                 >
                     <Button
                         width="60px"
