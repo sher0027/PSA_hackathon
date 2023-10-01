@@ -12,6 +12,19 @@ export const users = [
       skillsToLearn: ["Node.js", "Python", "Marketing"],
       projects:["PSA codesprint"],
     },
+
+    {
+      id: 2,
+      name: "Employee 1",
+      imageUrl: '/images/mentor1.jpg',
+      age: "30", 
+      yearsOfExperience: "2", 
+      role: "Software Engineer", 
+      department: "Supply Management",
+      skills: ["JavaScript", "React"],
+      skillsToLearn: ["Node.js", "Python", "Marketing"],
+      projects:["PSA codesprint"],
+    },
     // Add more user data as needed
   ];
   
