@@ -37,11 +37,14 @@
 
 
 .matching-score {
-  margin-top: 8px;
+  margin-top: 20px;
   margin-right: 20px; 
   font-size: 20px;
   color: #777;
   text-align: center;
+  border: 3px solid #ccc;
+  border-radius: 50%;
+  padding: 40px;
 }
 
 .matching-score-number {
@@ -116,4 +119,8 @@
   font-size: 18px;
   flex-grow: 1; /* Allow the app name to take up the remaining space */
   text-align: center; /* Center the text within the space */
+}
+
+body {
+  background-color: #EAF6E4;
 }
