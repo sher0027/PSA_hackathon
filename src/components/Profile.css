@@ -1,5 +1,5 @@
 .user-image img {
-    max-width: 100px; /* Adjust the image width as needed */
+    max-width: 100px; 
     height: auto;
     float: left;
     margin-right: 20px;
@@ -17,12 +17,12 @@
   .app-name {
     font-weight: bold;
     font-size: 18px;
-    flex-grow: 1; /* Allow the app name to take up the remaining space */
-    text-align: center; /* Center the text within the space */
+    flex-grow: 1; 
+    text-align: center; 
   }
 
   .mentor-image img {
-    max-width: 170px; /* Adjust the image width as needed */
+    max-width: 170px; 
     height: auto;
     float: left;
     margin-right: 20px;
