@@ -51,10 +51,6 @@ function Recommendations() {
 
     return (
         <div>
-            {/* <div className="top-bar">
-                <div className="back-button" onClick={navigateBack}>Back</div>
-                <div className="app-name">PSA app</div>
-            </div> */}
             <Container minW="100vw" p={0}>
                 <Stack
                     spacing={4}
@@ -97,7 +93,7 @@ function Recommendations() {
                             </div>
                             <div className="matching-score">
                                 Matching Score: <br></br> <div className="matching-score-number"> {mentor.skillsToLearnScore}
-                                    <img src="/images/star.png" alt="Star" className="star-icon" /></div>
+                                    <img src="/images/star.png" alt="Star" className="star-icon" /> </div>
                             </div>
                         </div>
                     ))}
@@ -105,52 +101,6 @@ function Recommendations() {
             </div>
         </div>
     );
-<<<<<<< HEAD
-=======
-
-    setRecommendedMentors(sortedMentors);
-  }, []);
-
-return (
-    <div>
-    <div className="top-bar">
-      <div className="back-button" onClick={navigateBack}>Back</div>
-      <div className="app-name">PSA app</div>
-    </div>
-    <div>
-    <div className="recommedation-container">
-      <h2>Mentor Recommendations</h2>
-      </div>
-      <div className="mentor-list">
-        {recommendedMentors.map((mentor) => (
-          <div key={mentor.id} className="mentor-container" onClick={() => navigateToMentor(mentor.id)}>
-            <div className="mentor-box">
-            <div className="mentor-image">
-              <img src={mentor.imageUrl} alt={`${mentor.name}`} />
-            </div>
-            <div className="mentor-details">
-            <div className="mentor-name">{mentor.name}</div>
-            <div className="mentor-role">{mentor.role}</div>
-            <div className="mentor-skills">
-              Skills:{' '}
-              < br></br>
-              {mentor.skills.map((skill, index) => (
-               users[0].skillsToLearn.includes(skill) ? <div className="skill"><strong key={index}>{skill}</strong> </div> : <div className="skill"> {skill} </div>
-             ))}
-            </div>
-            </div>
-            </div>
-            <div className="matching-score">
-              Matching Score: <br></br> <div className="matching-score-number"> {mentor.skillsToLearnScore} 
-              <img src="/images/star.png" alt="Star" className="star-icon" /></div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-    </div>
-  );
->>>>>>> 240c4fa5fb367007442785a6e4f9aedf6b472357
 }
 
 export default Recommendations;
