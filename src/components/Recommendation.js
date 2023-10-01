@@ -47,7 +47,7 @@ function Recommendations() {
 
 return (
     <div>
-    <div className="top-bar">
+      <div className="top-bar">
       <div className="back-button" onClick={navigateBack}>Back</div>
       <div className="app-name">PSA app</div>
     </div>

@@ -20,3 +20,12 @@
     flex-grow: 1; /* Allow the app name to take up the remaining space */
     text-align: center; /* Center the text within the space */
   }
+
+  .mentor-image img {
+    max-width: 170px; /* Adjust the image width as needed */
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 5px;
+    border:5px solid #e0f7e0;
+  }

@@ -43,6 +43,7 @@ import {
   ChakraProvider,
 } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
+import './Profile.css'
 
 const theme = extendTheme({
   colors: {
@@ -64,8 +65,8 @@ function Profile({ user }) {
   };
 
   const mentors = [
-    { name: "User 1", imageUrl: "/images/mentor1.jpg" },
-    { name: "User 2", imageUrl: "/images/mentor2.jpg" },
+    { name: "Person 1", imageUrl: "/images/mentor1.jpg" },
+    { name: "Person 2", imageUrl: "/images/mentor1.jpg" },
   ];
   
   return (
@@ -93,10 +94,28 @@ function Profile({ user }) {
         </Box>
         <Flex>
           <Box flex="1" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-            <Avatar size="2xl" name={user.name} src={user.imageUrl} marginBottom="6"/>
-            <Button onClick={navigateToFindMentor} mt={2} colorScheme="teal">
-              Find Mentor
+          <div className="mentor-image">
+          <img src={user.imageUrl} alt={`${user.name}`} />
+          </div>
+          <Button onClick={navigateToFindMentor} mt={3} colorScheme="teal" width="200px" height="50px" marginTop="5">
+              Find Mentor!!
             </Button>
+          <Box
+              bg="white"
+              p={4}
+              boxShadow="md"
+              borderRadius="lg"
+              borderTop="5px solid #e0f7e0"
+              marginBottom="10"
+              marginTop="14"
+              marginRight="7"
+              textAlign="left"
+              width="190px"
+              height="290px"
+            >
+              <Heading as="h5" size="lg" marginBottom="2">
+                Matches
+              </Heading>
             <Flex mt={4}>
             {mentors.map((avatar, index) => (
               <Box key={index} mr={4}>
@@ -109,7 +128,8 @@ function Profile({ user }) {
               </Box>
             ))}
           </Flex>
-          </Box>
+            </Box>
+            </Box>
           <Box flex="4">
             <Box
               bg="white"
