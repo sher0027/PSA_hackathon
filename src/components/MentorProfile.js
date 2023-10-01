@@ -2,10 +2,12 @@ import React from 'react';
 import './MentorProfile.css';
 import { mentors } from '../data';
 import {
-    Flex, Container, Stack, Text, Avatar, Heading, Tag, Box,
-    Badge, Button
+    Flex, Container, Stack, Text, Avatar, Heading, Tag, Box, Image,
+    Badge, Button,
+    Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalHeader, ModalFooter, useDisclosure, ModalBody,
 } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
+
 
 
 function MentorProfile({ mentor }) {
@@ -14,6 +16,8 @@ function MentorProfile({ mentor }) {
     const navigateBack = () => {
         navigate('/recommendation');
     };
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
     // return (
     // <div>
     // <div className="top-bar">
@@ -36,7 +40,7 @@ function MentorProfile({ mentor }) {
     //       {/* Add more mentor-specific details here */}
     //     </div>
     //   </div>
-    // );ox
+    // );
     return (
         <div>
             <Flex
@@ -44,8 +48,10 @@ function MentorProfile({ mentor }) {
                 alignItems="center"
                 minHeight="100vh"
                 backgroundColor="#FFFFFF"
+                p={0}
+                width="100vw"
             >
-                <Container minW="100vw" p={0}>
+                <Container width="100vw" p={0} >
                     <Stack
                         spacing={4}
                         direction='row'
@@ -53,16 +59,29 @@ function MentorProfile({ mentor }) {
                         justifyContent="space-between"
                         padding="10px 20px"
                         backgroundColor="#EAF6E4"
+                        height="30px"
+                        boxShadow="0 5px 10px rgba(0, 0, 0, 0.2)" /* 水平偏移为0，垂直偏移为正数，模糊半径和颜色 */
                     >
-                        <Button size='md' onClick={navigateBack} borderRadius="30%">
+                        <Button
+                            width="60px"
+                            onClick={navigateBack}
+                            borderRadius="10px"
+                            p={6}
+                            backgroundColor="transparent"
+                            borderStyle="none"
+                            fontSize="18px"
+                        >
                             Back
                         </Button>
-                        <Badge>
-                            PSA App
-                        </Badge>
+                        <Flex justifyContent="center">
+                            <Badge fontSize="20px" fontWeight="bold" padding="10px 0 10px">
+                                FISH! Growth
+                            </Badge>
+                            <Image src={process.env.PUBLIC_URL + "/icon.png"} width="40px" qpacity="0" margin="0 10px" />
+                        </Flex>
+
                     </Stack>
                 </Container>
-
                 <Flex
                     backgroundColor="#FFFFFF"
                     minW="90%"
@@ -75,7 +94,7 @@ function MentorProfile({ mentor }) {
                 >
                     <Flex
                         justifyContent="center"
-                        alignItems="center"
+                        // alignItems="center"
                         width="25%"
                         borderRadius="30px"
                         backgroundColor="#EAF6E4"
@@ -90,7 +109,7 @@ function MentorProfile({ mentor }) {
                                 src={mentor.imageUrl}
                                 borderRadius="50%"
                                 boxSize="150px"
-                                margin="40px 30px 30px"
+                                margin="40px 30px 10px"
                             />
                             <Text
                                 margin="10px 0 20px"
@@ -124,13 +143,13 @@ function MentorProfile({ mentor }) {
                                 <Text
                                     fontFamily="Lucida Console"
                                     color="	#708090"
-                                    margin="0 0 10px"
+                                    margin="0"
                                 >
                                     {mentor.email}
                                 </Text>
                                 <Text
-                                    margin="10px 0"
-                                    as="h2"
+                                    margin="10px 0 0"
+                                    as="h4"
                                     color="	#708090"
                                 >
                                     Connects
@@ -149,6 +168,39 @@ function MentorProfile({ mentor }) {
                                     </Box>
                                 ))}
                             </Flex>
+                            <Button
+                                onClick={onOpen}
+                                padding="10px"
+                                backgroundColor="#82B479"
+                                color="#FCECDC"
+                                fontSize="20PX"
+                                fontWeight="bold"
+                                width="130px"
+                                borderRadius="15px"
+                                borderColor="#ffffff"
+                                borderStyle="solid"
+
+                            >Match</Button>
+
+                            <Modal isOpen={isOpen} onClose={onClose} >
+                                <ModalOverlay />
+                                <ModalContent >
+                                    <ModalHeader>Match with mentor</ModalHeader>
+                                    <ModalCloseButton />
+                                    <ModalBody>
+                                        Are you sure to match with this mentor?
+                                    </ModalBody>
+
+                                    <ModalFooter>
+                                        <Button colorScheme='blue' mr={3} >
+                                            YES
+                                        </Button>
+                                        <Button variant='ghost' onClick={onClose} >NO</Button>
+                                    </ModalFooter>
+                                </ModalContent>
+                            </Modal>
+
+
                         </Flex>
 
                     </Flex>

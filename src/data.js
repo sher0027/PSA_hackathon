@@ -14,23 +14,70 @@ export const users = [
         skills: ["JavaScript", "React"],
         skillsToLearn: ["Node.js", "Python", "Marketing"],
         projects: ["PSA codesprint"],
-
     },
 
     {
         id: 2,
-        name: "Employee 1",
-        imageUrl: '/images/mentor1.jpg',
-        age: "30",
-        yearsOfExperience: "2",
-        role: "Software Engineer",
-        department: "Supply Management",
-        location: "Singapore",
-        tel: "88888888",
-        email: "XXXXXXXX@gmail.com",
-        skills: ["JavaScript", "React"],
-        skillsToLearn: ["Node.js", "Python", "Marketing"],
-        projects: ["PSA codesprint"],
+        name: "Tech Guru",
+        imageUrl: '/images/mentor2.jpg',
+        age: "35",
+        yearsOfExperience: "5",
+        role: "Senior Developer",
+        department: "Engineering",
+        location: "San Francisco",
+        tel: "55555555",
+        email: "techguru@gmail.com",
+        skills: ["Python", "Django", "JavaScript"],
+        skillsToLearn: ["Machine Learning", "AI", "Data Science"],
+        projects: ["E-commerce Platform", "Data Analytics"]
+    },
+    {
+
+        id: 3,
+        name: "Code Ninja",
+        imageUrl: '/images/mentor3.jpg',
+        age: "28",
+        yearsOfExperience: "3",
+        role: "Full Stack Developer",
+        department: "Technology",
+        location: "New York",
+        tel: "77777777",
+        email: "codeninja@gmail.com",
+        skills: ["Java", "Spring Boot", "Angular"],
+        skillsToLearn: ["Cloud Computing", "DevOps"],
+        projects: ["Inventory Management", "E-learning Platform"]
+    },
+
+    {
+        id: 4,
+        name: "Web Wizard",
+        imageUrl: '/images/mentor4.jpg',
+        age: "32",
+        yearsOfExperience: "6",
+        role: "UI/UX Designer",
+        department: "Design",
+        location: "London",
+        tel: "66666666",
+        email: "webwizard@gmail.com",
+        skills: ["HTML", "CSS", "JavaScript"],
+        skillsToLearn: ["Motion Graphics", "UI Animation"],
+        projects: ["Website Redesign", "Mobile App UI"]
+    },
+
+    {
+        id: 5,
+        name: "Data Scientist",
+        imageUrl: '/images/mentor5.jpg',
+        age: "29",
+        yearsOfExperience: "4",
+        role: "Data Scientist",
+        department: "Data Science",
+        location: "Berlin",
+        tel: "99999999",
+        email: "datascientist@gmail.com",
+        skills: ["Python", "R", "Machine Learning"],
+        skillsToLearn: ["Big Data", "Natural Language Processing"],
+        projects: ["Customer Segmentation", "Predictive Modeling"]
     },
     // Add more user data as needed
 ];
