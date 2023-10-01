@@ -66,7 +66,8 @@ function Profile({ user }) {
     };
 
     const mentors = [
-        { name: "Person 1", imageUrl: "/images/mentor1.jpg" },
+        { name: "Person 1", imageUrl: "/images/mentor3.jpg" },
+        { name: "Person 2", imageUrl: "/images/mentor2.jpg" },
         { name: "Person 2", imageUrl: "/images/mentor1.jpg" },
     ];
 

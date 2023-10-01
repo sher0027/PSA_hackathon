@@ -4,7 +4,7 @@ import { mentors } from '../data';
 import {
     Flex, Container, Stack, Text, Avatar, Heading, Tag, Box, Image,
     Badge, Button,
-    Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalHeader, ModalFooter, useDisclosure, ModalBody,
+    // Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalHeader, ModalFooter, useDisclosure, ModalBody,
 } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ function MentorProfile({ mentor }) {
         navigate('/recommendation');
     };
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    // const { isOpen, onOpen, onClose } = useDisclosure()
     // return (
     // <div>
     // <div className="top-bar">
@@ -169,7 +169,7 @@ function MentorProfile({ mentor }) {
                                 ))}
                             </Flex>
                             <Button
-                                onClick={onOpen}
+                                // onClick={onOpen}
                                 padding="10px"
                                 backgroundColor="#82B479"
                                 color="#FCECDC"
@@ -181,7 +181,7 @@ function MentorProfile({ mentor }) {
                                 borderStyle="solid"
 
                             >Match</Button>
-
+                            {/* 
                             <Modal isOpen={isOpen} onClose={onClose} >
                                 <ModalOverlay />
                                 <ModalContent >
@@ -198,7 +198,7 @@ function MentorProfile({ mentor }) {
                                         <Button variant='ghost' onClick={onClose} >NO</Button>
                                     </ModalFooter>
                                 </ModalContent>
-                            </Modal>
+                            </Modal> */}
 
 
                         </Flex>
@@ -222,7 +222,7 @@ function MentorProfile({ mentor }) {
                             margin="10"
                         >
                             <Text m={0} p={10}>Age:  {mentor.age}</Text>
-                            <Text m={0} p={10}>Years of Experiment:  {mentor.yearsOfExperiment}</Text>
+                            <Text m={0} p={10}>Years of Experiment:  {mentor.yearsOfExperience}</Text>
                             <Text m={0} p={10}>Department:  {mentor.department}</Text>
                             <Text m={0} p={10}>Role:  {mentor.role}</Text>
                         </Flex>
